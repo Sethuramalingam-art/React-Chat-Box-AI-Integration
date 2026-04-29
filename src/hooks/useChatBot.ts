@@ -1,7 +1,7 @@
 import React from "react";
 // import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// const genAI = new GoogleGenerativeAI("AIzaSyBcXEHbTYppQCRV7xtoGUpdw762PaLbWzY");
+// const genAI = new GoogleGenerativeAI("APIKEY");
 
 interface Message {
   id: string;
@@ -34,7 +34,7 @@ const useChatBot = () => {
     setMessages((prevMessages) => [...prevMessages, message]);
     try {
       //   const res = await fetch(
-      //     "https://generativelanguage.googleapis.com/v1beta/models?key=AIzaSyBcXEHbTYppQCRV7xtoGUpdw762PaLbWzY",
+      //     "https://generativelanguage.googleapis.com/v1beta/models?key=APIKEY",
       //   );
       //     {
       //       method: "POST",
