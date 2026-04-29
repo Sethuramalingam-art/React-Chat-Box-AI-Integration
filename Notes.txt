@@ -1,0 +1,28 @@
+Open AI and Gemini AI are always coming as quota exceeded so decided to ollama model
+
+Steps to include Ollama
+
+install Ollama
+step1:
+# Mac / Linux
+curl -fsSL https://ollama.com/install.sh | sh
+
+Step2:
+ollama pull llama3
+
+Step3:
+ollama run llama3
+
+Step4: 
+// Ollama llama3 model host http://localhost:11434
+const res = await fetch("http://localhost:11434/api/generate", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    model: "llama3",
+    prompt: "Explain React hooks"
+  })
+});
+
+const data = await res.json();
+console.log(data.response);
